@@ -103,7 +103,8 @@ private:
 
     State state;
 
-    static constexpr std::array<std::array<size_t, 3>, 8> WINNING_COMBOS = {{
+    static constexpr std::array<std::array<size_t, 3>, 8> WINNING_COMBOS =
+    {{
         {{1, 4, 7}},
         {{2, 5, 8}},
         {{3, 6, 9}},
@@ -182,6 +183,11 @@ private:
     }
 };
 
+class Player_AI
+{
+    // TBD
+};
+
 int main()
 {
     Game_Board board;
@@ -189,6 +195,11 @@ int main()
 
     std::cout << "Welcome to Terminal Tic-Tac-Toe!\n"
         << "Send \"exit\" or \"quit\" at any time to stop playing.\n\n";
+
+    std::cout << "Would you like to play local PvP (1) or against AI (2)?\n";
+    std::cout << "> ";
+    std::cin >> input;
+    std::cout << "\n";
 
     while (true)
     {
